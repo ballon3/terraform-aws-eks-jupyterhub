@@ -32,5 +32,5 @@ spec:
 #    - ReadWriteMany
 #  nfs:
 #    # TODO:
-#    server: {EFS-ID}.efs.ap-northeast-2.amazonaws.com
+#    server: {EFS-ID}.efs.us-west-2.amazonaws.com
 #    path: "/"

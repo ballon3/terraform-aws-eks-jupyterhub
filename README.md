@@ -102,8 +102,8 @@ $ aws eks update-kubeconfig --name analysis-production
 $ kubectl get nodes
 
 NAME                                                STATUS    ROLES     AGE       VERSION
-ip-10-XXX-XXX.XXX.ap-northeast-2.compute.internal   Ready     <none>    2m15s     v1.13.7-eks-c57ff8
-ip-10-YYY-YYY-YYY.ap-northeast-2.compute.internal   Ready     <none>    2m15s     v1.13.7-eks-c57ff8
+ip-10-XXX-XXX.XXX.us-west-2.compute.internal   Ready     <none>    2m15s     v1.13.7-eks-c57ff8
+ip-10-YYY-YYY-YYY.us-west-2.compute.internal   Ready     <none>    2m15s     v1.13.7-eks-c57ff8
 ```
 
 ### terraform-root-bastion

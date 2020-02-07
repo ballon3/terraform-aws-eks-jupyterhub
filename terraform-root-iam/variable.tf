@@ -1,24 +1,24 @@
 variable "region" {
-  default = "ap-northeast-2"
+  default = "us-west-2"
 }
 
 variable "availability_zones" {
   type = "list"
   default = [
-    "ap-northeast-2a",
-    "ap-northeast-2b",
-    "ap-northeast-2c",
+    "us-west-2a",
+    "us-west-2b",
+    "us-west-2c",
   ]
 }
 
 variable "availability_zone_a" {
-  default = "ap-northeast-2a"
+  default = "us-west-2a"
 }
 
 variable "availability_zone_b" {
-  default = "ap-northeast-2b"
+  default = "us-west-2b"
 }
 
 variable "availability_zone_c" {
-  default = "ap-northeast-2c"
+  default = "us-west-2c"
 }

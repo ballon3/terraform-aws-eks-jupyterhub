@@ -4,7 +4,7 @@ data "terraform_remote_state" "vpc" {
   config = {
     bucket         = "terraform-infra-poc"
     key            = "terraform-root-vpc/tfstate"
-    region         = "ap-northeast-2"
+    region         = "us-west-2"
     encrypt        = true
     dynamodb_table = "terraform-lock-resource"
   }
@@ -16,7 +16,7 @@ data "terraform_remote_state" "iam" {
   config = {
     bucket         = "terraform-infra-poc"
     key            = "terraform-root-iam/tfstate"
-    region         = "ap-northeast-2"
+    region         = "us-west-2"
     encrypt        = true
     dynamodb_table = "terraform-lock-iam"
   }
@@ -28,7 +28,7 @@ data "terraform_remote_state" "eks" {
   config = {
     bucket         = "terraform-infra-poc"
     key            = "terraform-root-eks/tfstate"
-    region         = "ap-northeast-2"
+    region         = "us-west-2"
     encrypt        = true
     dynamodb_table = "terraform-lock-resource"
   }

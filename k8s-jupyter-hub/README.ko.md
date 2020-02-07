@@ -2,7 +2,7 @@
 
 ## Preparation 
 
-- [x] `k8s.efs-volume.yaml` 파일 내의 `{EFS-ID}` 값을 수정 ([AWS EFS Console](https://ap-northeast-2.console.aws.amazon.com/efs/home?region=ap-northeast-2#/filesystems))
+- [x] `k8s.efs-volume.yaml` 파일 내의 `{EFS-ID}` 값을 수정 ([AWS EFS Console](https://us-west-2.console.aws.amazon.com/efs/home?region=us-west-2#/filesystems))
 
 ```bash
 # Jupyter Hub 를 위한 EBS, EFS k8s 리소스를 생성 
@@ -27,10 +27,10 @@ kubectl get pods -n jupyter-production -w
 kubectl --namespace=jupyter-production get svc proxy-public
 
 NAME           TYPE           CLUSTER-IP     EXTERNAL-IP                                                                    PORT(S)                      AGE
-proxy-public   LoadBalancer   172.20.50.70   XXX-YYYY.ap-northeast-2.elb.amazonaws.com   80:30906/TCP,443:32326/TCP   33m
+proxy-public   LoadBalancer   172.20.50.70   XXX-YYYY.us-west-2.elb.amazonaws.com   80:30906/TCP,443:32326/TCP   33m
 ```
 
-만들어진 Jupyter [Load Balancer DNS](https://ap-northeast-2.console.aws.amazon.com/ec2/home?region=ap-northeast-2#LoadBalancers:tag:kubernetes.io/cluster/analysis-production=owned;sort=loadBalancerName) 를 브라우저에서 방문합니다.
+만들어진 Jupyter [Load Balancer DNS](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#LoadBalancers:tag:kubernetes.io/cluster/analysis-production=owned;sort=loadBalancerName) 를 브라우저에서 방문합니다.
 
 초기 사용자 / 패스워드는 `1ambda / mypassword` 입니다. 변경을 원하면 [jupyter.helm-config.yaml](https://github.com/1ambda/terraform-aws-eks-jupyterhub/blob/master/k8s-jupyter-hub/jupyter.helm-config.yaml#L41-L50) 파일 내의 `auth` 수정 한 후 `jupyter.helm-update.sh` 를 실행합니다.
 

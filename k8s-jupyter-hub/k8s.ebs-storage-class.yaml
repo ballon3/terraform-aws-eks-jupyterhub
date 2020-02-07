@@ -12,4 +12,4 @@ allowedTopologies:
   - matchLabelExpressions:
       - key: failure-domain.beta.kubernetes.io/zone
         values:
-          - ap-northeast-2a
+          - us-west-2a

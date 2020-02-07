@@ -2,7 +2,7 @@
 
 ## Preparation 
 
-- [x] Modify `{EFS-ID}` value in `k8s.efs-volume.yaml` ([AWS EFS Console](https://ap-northeast-2.console.aws.amazon.com/efs/home?region=ap-northeast-2#/filesystems))
+- [x] Modify `{EFS-ID}` value in `k8s.efs-volume.yaml` ([AWS EFS Console](https://us-west-2.console.aws.amazon.com/efs/home?region=us-west-2#/filesystems))
 
 ```bash
 # will create EBS, EFS k8s resources for jupyter hub
@@ -27,10 +27,10 @@ kubectl get pods -n jupyter-production -w
 kubectl --namespace=jupyter-production get svc proxy-public
 
 NAME           TYPE           CLUSTER-IP     EXTERNAL-IP                                                                    PORT(S)                      AGE
-proxy-public   LoadBalancer   172.20.50.70   XXX-YYYY.ap-northeast-2.elb.amazonaws.com   80:30906/TCP,443:32326/TCP   33m
+proxy-public   LoadBalancer   172.20.50.70   XXX-YYYY.us-west-2.elb.amazonaws.com   80:30906/TCP,443:32326/TCP   33m
 ```
 
-Then, visit [a load balancer DNS](https://ap-northeast-2.console.aws.amazon.com/ec2/home?region=ap-northeast-2#LoadBalancers:tag:kubernetes.io/cluster/analysis-production=owned;sort=loadBalancerName) which has a tag `kubernetes.io/cluster/analysis-production:owned`
+Then, visit [a load balancer DNS](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#LoadBalancers:tag:kubernetes.io/cluster/analysis-production=owned;sort=loadBalancerName) which has a tag `kubernetes.io/cluster/analysis-production:owned`
 
 Initial username and password are `1ambda / mypassword`. If you want to add / modify, then update file [jupyter.helm-config.yaml](https://github.com/1ambda/terraform-aws-eks-jupyterhub/blob/master/k8s-jupyter-hub/jupyter.helm-config.yaml#L41-L50)'s auth property and execute `./jupyter.helm-update.sh` again.
 

@@ -4,7 +4,7 @@ terraform {
   backend "s3" {
     bucket         = "terraform-infra-poc"
     key            = "terraform-root-bastion/tfstate"
-    region         = "ap-northeast-2"
+    region         = "us-west-2"
     encrypt        = true
     dynamodb_table = "terraform-lock-resource"
   }
